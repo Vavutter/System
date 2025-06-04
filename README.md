@@ -4,6 +4,6 @@ This repository contains **BookWriter**, a simple web application for writing bo
 
 ## Usage
 
-Open `index.html` in your browser. The toolbar lets you format text (bold, italic, underline), change font family and size, add chapters, and choose cover and back images.
+Open `index.html` in your browser. The toolbar now includes text alignment, lists, font color, orientation selection and a dark mode toggle. You can add chapters or blank pages, insert images and choose cover/back images.
 
-When you are ready, click **Export PDF** to download the book in A4 PDF format, which can be used with most printing services.
+The content is automatically saved in your browser. Click **Export PDF** when finished to download the book as a PDF ready for most printing services.

@@ -3,6 +3,20 @@ body {
     margin: 0;
     padding: 0;
 }
+body.dark {
+    background: #1e1e1e;
+    color: #eee;
+}
+body.dark header {
+    background-color: #111;
+}
+body.dark #toolbar {
+    background: #333;
+}
+body.dark .page {
+    background: #222;
+    border-color: #555;
+}
 header {
     background-color: #222;
     color: #fff;
@@ -10,8 +24,31 @@ header {
     text-align: center;
 }
 #toolbar {
-    padding: 1rem;
+    padding: 0.5rem;
     background: #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+#toolbar button, #toolbar select, #toolbar input[type="color"] {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+}
+#toolbar button:hover {
+    background: #e6e6e6;
+}
+body.dark #toolbar button,
+body.dark #toolbar select,
+body.dark #toolbar input[type="color"] {
+    background: #444;
+    border-color: #666;
+    color: #eee;
+}
+body.dark #toolbar button:hover {
+    background: #555;
 }
 #book {
     padding: 1rem;

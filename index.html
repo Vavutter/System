@@ -12,24 +12,40 @@
     </header>
 
     <div id="toolbar">
-        Cover: <input type="file" id="coverInput" accept="image/*">
-        Back: <input type="file" id="backInput" accept="image/*">
-        <button onclick="format('bold')">Bold</button>
-        <button onclick="format('italic')">Italic</button>
-        <button onclick="format('underline')">Underline</button>
+        <label>Cover: <input type="file" id="coverInput" accept="image/*"></label>
+        <label>Back: <input type="file" id="backInput" accept="image/*"></label>
+        <button onclick="format('bold')"><b>B</b></button>
+        <button onclick="format('italic')"><em>I</em></button>
+        <button onclick="format('underline')"><u>U</u></button>
+        <button onclick="format('insertUnorderedList')">• List</button>
+        <button onclick="format('insertOrderedList')">1. List</button>
+        <button onclick="format('justifyleft')">Left</button>
+        <button onclick="format('justifycenter')">Center</button>
+        <button onclick="format('justifyright')">Right</button>
+        <button onclick="document.getElementById('imgInput').click()">Image</button>
+        <input type="file" id="imgInput" accept="image/*" style="display:none">
+        <input type="color" id="fontColor" title="Font Color">
         <select id="fontName">
             <option value="Arial">Arial</option>
             <option value="Times New Roman">Times New Roman</option>
             <option value="Georgia">Georgia</option>
+            <option value="Courier New">Courier New</option>
         </select>
         <select id="fontSize">
             <option value="12px">12</option>
             <option value="16px">16</option>
             <option value="20px">20</option>
             <option value="24px">24</option>
+            <option value="32px">32</option>
+        </select>
+        <select id="orientation">
+            <option value="portrait">Portrait</option>
+            <option value="landscape">Landscape</option>
         </select>
         <button onclick="addChapter()">Add Chapter</button>
+        <button onclick="addPage()">Add Page</button>
         <button onclick="exportPDF()">Export PDF</button>
+        <button onclick="toggleTheme()" title="Toggle light/dark">🌙</button>
     </div>
 
     <div id="book">
