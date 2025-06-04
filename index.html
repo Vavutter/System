@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BookWriter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>BookWriter</h1>
+    </header>
+
+    <div id="toolbar">
+        Cover: <input type="file" id="coverInput" accept="image/*">
+        Back: <input type="file" id="backInput" accept="image/*">
+        <button onclick="format('bold')">Bold</button>
+        <button onclick="format('italic')">Italic</button>
+        <button onclick="format('underline')">Underline</button>
+        <select id="fontName">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Georgia">Georgia</option>
+        </select>
+        <select id="fontSize">
+            <option value="12px">12</option>
+            <option value="16px">16</option>
+            <option value="20px">20</option>
+            <option value="24px">24</option>
+        </select>
+        <button onclick="addChapter()">Add Chapter</button>
+        <button onclick="exportPDF()">Export PDF</button>
+    </div>
+
+    <div id="book">
+        <div id="cover" class="page" contenteditable="true">
+            <h2>Book Title</h2>
+            <p>Author Name</p>
+        </div>
+        <div id="content">
+            <div class="chapter page" contenteditable="true">
+                <h2>Chapter 1</h2>
+                <p>Start writing here...</p>
+            </div>
+        </div>
+        <div id="back" class="page" contenteditable="true">
+            <p>Back page...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
